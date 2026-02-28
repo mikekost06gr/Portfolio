@@ -1,0 +1,48 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.skills": "Skills",
+  "nav.contact": "Contact",
+  "nav.resume": "Resume ↓",
+
+  "home.greeting": "Hello, I'm",
+  "home.nameLine1": "Kostoglou",
+  "home.nameLine2": "Michail-Angelos",
+  "home.description": "Junior Full-Stack Developer who likes creating efficient and scalable web apps. Currently studying Computer Science at Democritus University of Thrace. Passionate about learning new technologies and improving my skills in software development.",
+  "home.btnProjects": "View my Projects",
+  "home.btnContact": "Get in Touch",
+
+  "about.title": "About Me",
+  "about.p1": "I'm a junior full-stack developer with a passion for technology and software development. I'm currently pursuing my Bachelor's degree in Computer Science at the Democritus University of Thrace.",
+  "about.p2": "I hold an ECPE Proficiency certificate in English (C2 Level). I've been coding from 2023, building projects that range from web applications to slight game development.",
+  "about.p3": "A few details about me:",
+  "about.born": "Born: January 20th, 2006",
+  "about.location": "Location: Currently in Kavala, Greece",
+  "about.education": "Education: BSc Computer Science (in progress)",
+  "about.university": "University: Democritus University of Thrace",
+
+  "skills.title": "Skills & Programming Languages",
+
+  "projects.title": "My Projects",
+  "projects.card1.title": "Portfolio Website",
+  "projects.card1.desc": "A personal portfolio website built with HTML, CSS, and JavaScript. It showcases my skills, projects, and experience as a full-stack developer. The website is designed to be responsive and visually appealing, providing visitors with an engaging experience.",
+  "projects.card2.title": "University Project",
+  "projects.card2.desc": "A university presentation project built with HTML, CSS, and JavaScript. The project was created as part of a university assignment and demonstrates my ability to create a visually appealing and interactive web application. The project includes various features such as animations, responsive design, and user interaction.",
+  "projects.card3.title": "Coming Soon...",
+  "projects.card3.desc": "Another exciting project coming soon. I'm constantly exploring new technologies and pushing the boundaries of what I can build.",
+
+  "contact.title": "Get In Touch",
+  "contact.text": "I'm currently looking for new opportunities and my inbox is always open. Whether you have a question or just want to say hi, fill out the form below and I'll get back to you as soon as possible!",
+  "contact.labelName": "Name",
+  "contact.labelEmail": "Email",
+  "contact.labelSubject": "Subject",
+  "contact.labelMessage": "Message",
+  "contact.placeholderName": "Your name",
+  "contact.placeholderEmail": "your@email.com",
+  "contact.placeholderSubject": "What is this about?",
+  "contact.placeholderMessage": "Your message...",
+  "contact.btnSend": "Send Message",
+  "contact.msgSuccess": "Message sent successfully! I'll get back to you soon.",
+  "contact.msgError": "Oops! Something went wrong. Please try again or email me directly."
+
+}
