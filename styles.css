@@ -1087,8 +1087,9 @@ ul {
     top: auto;
     bottom: 20px;
     left: 16px;
-    right: 16px;
-    max-width: none;
+    right: auto;
+    width: min(320px, calc(100vw - 32px));
+    max-width: 320px;
   }
 }
 
@@ -1293,4 +1294,15 @@ ul {
 
 .lang-notification_close:hover {
   color: var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+  .lang-notification {
+    top: calc(var(--nav-height) + 12px);
+    bottom: auto;
+    left: 16px;
+    right: auto;
+    width: min(320px, calc(100vw - 32px));
+    max-width: 320px;
+  }
 }
