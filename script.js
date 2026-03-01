@@ -59,6 +59,7 @@
   navToggle.addEventListener("click", () => {
     navToggle.classList.toggle("active");
     navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", navMenu.classList.contains("open") ? "true" : "false");
     document.body.style.overflow = navMenu.classList.contains("open")
       ? "hidden"
       : "";
@@ -69,6 +70,7 @@
     link.addEventListener("click", () => {
       navToggle.classList.remove("active");
       navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
     });
   });
@@ -205,8 +207,10 @@
           const id = entry.target.getAttribute("id");
           navItems.forEach((item) => {
             item.style.color = "";
+            item.removeAttribute("aria-current");
             if (item.getAttribute("href") === `#${id}`) {
               item.style.color = "var(--accent)";
+              item.setAttribute("aria-current", "page");
             }
           });
         }
@@ -222,6 +226,7 @@
   // ——————————————————————————————————————
   const langToggle = document.getElementById("langToggle");
   const langFlag = document.getElementById("langFlag");
+  const resumeLink = document.getElementById("resumeLink");
 
   // Default language is Greek
   let currentLang = localStorage.getItem("lang") || "gr";
@@ -279,9 +284,29 @@
     const data = await loadTranslations(lang);
     applyTranslations(data);
     updateFlagIcon(lang);
+
+    if (resumeLink) {
+      const resumeFile = lang === "gr"
+        ? "Michail-Angelos Kostoglou_CV_gr.pdf"
+        : "Michail-Angelos Kostoglou_CV_en.pdf";
+      const resumeDownloadName = lang === "gr"
+        ? "Michail-Angelos Kostoglou_CV_gr"
+        : "Michail-Angelos Kostoglou_CV_en";
+
+      resumeLink.href = resumeFile;
+      resumeLink.setAttribute("download", resumeDownloadName);
+    }
+
     currentLang = lang;
     localStorage.setItem("lang", lang);
     document.documentElement.lang = lang === "gr" ? "el" : "en";
+  }
+
+  if (resumeLink && !("download" in HTMLAnchorElement.prototype)) {
+    resumeLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.open(resumeLink.href, "_blank", "noopener,noreferrer");
+    });
   }
 
   // Apply saved language on load

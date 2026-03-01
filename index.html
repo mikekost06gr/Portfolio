@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
     <!-- ============ LANGUAGE NOTIFICATION ============ -->
     <div class="lang-notification" id="langNotification">
         <p>For the English version, click the flag icon
@@ -34,8 +36,9 @@
     <!-- ============ CURSOR GLOW ============ -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
-    <nav class="nav" id="nav">
-        <button class="nav_toggle" id="navToggle" aria-label="Navigation Menu">
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <button class="nav_toggle" id="navToggle" aria-label="Navigation Menu" aria-expanded="false"
+            aria-controls="navMenu">
             <span></span>
             <span></span>
             <span></span>
@@ -46,7 +49,7 @@
             <li> <a href="#skills" data-nav data-i18n="nav.skills">Skills</a> </li>
             <li> <a href="#projects" data-nav data-i18n="nav.projects">Projects</a> </li>
             <li> <a href="#contact" data-nav data-i18n="nav.contact">Contact</a> </li>
-            <li> <a href="Michail-Angelos Kostoglou_CV.pdf" download="Michail-Angelos Kostoglou_CV"
+                <li> <a href="Michail-Angelos Kostoglou_CV_gr.pdf" download="Michail-Angelos Kostoglou_CV_gr" id="resumeLink"
                     class="nav_cta" data-i18n="nav.resume">Resume &#8595;</a> </li>
             <li>
                 <button class="lang_toggle" id="langToggle" aria-label="Switch Language" title="Ελληνικά">
@@ -56,6 +59,7 @@
         </ul>
     </nav>
 
+    <main id="mainContent">
     <!-- ============ HOME SECTION ============ -->
     <section class="home" id="home">
         <div class="home_content">
@@ -65,7 +69,7 @@
                 <span data-i18n="home.nameLine2">Michail-Angelos</span><span class="accent">.</span>
             </h1>
             <h2 class="home_tagline" data-i18n="home.tagline">
-                Full-Stack Developer | Software Engineer | Tech Enthusiast
+                Full-Stack Developer | Software&nbsp;Engineer | Tech&nbsp;Enthusiast
             </h2>
             <p class="home_description" data-i18n="home.description">
                 Junior Full-Stack Developer who likes creating efficient and scalable web apps.
@@ -80,7 +84,7 @@
 
         <div class="home_visual">
             <div class="home_image-wrapper">
-                <img src="images/176953.jpg" alt="Michail-Angelos Kostoglou" class="home_photo" />
+                <img src="images/176953.jpg" alt="Michail-Angelos Kostoglou" class="home_photo" fetchpriority="high" decoding="async" />
                 <div class="home_image-border"></div>
             </div>
         </div>
@@ -89,7 +93,7 @@
     <!-- ============ ABOUT SECTION ============ -->
     <section class="about" id="about">
         <h2 class="section_title">
-            <span class="accent-num">01.</span> <span data-i18n="about.title">About Me</span>
+            <span class="accent-num">𝓲.</span> <span data-i18n="about.title">About Me</span>
         </h2>
         <div class="about_grid">
             <div class="about_text">
@@ -113,7 +117,7 @@
             </div>
             <div class="about_image">
                 <div class="about_image-wrapper">
-                    <img src="images/176953.jpg" alt="Michail-Angelos Kostoglou" />
+                    <img src="images/176953.jpg" alt="Michail-Angelos Kostoglou" loading="lazy" decoding="async" />
                     <div class="about_image-overlay"></div>
                 </div>
             </div>
@@ -123,31 +127,31 @@
     <!-- ============ SKILLS SECTION ============ -->
     <section class="skills" id="skills">
         <h2 class="section_title">
-            <span class="accent-num">02.</span> <span data-i18n="skills.title">Skills &amp; Programming Languages</span>
+            <span class="accent-num">𝓲𝓲.</span> <span data-i18n="skills.title">Skills &amp; Programming Languages</span>
         </h2>
         <div class="skills_grid">
             <div class="skill-card">
-                <img src="images/c++ logo.png" alt="C++" />
+                <img src="images/c++ logo.png" alt="C++" loading="lazy" decoding="async" />
                 <span>C++</span>
             </div>
             <div class="skill-card">
-                <img src="images/javascript logo.png" alt="JavaScript" />
+                <img src="images/javascript logo.png" alt="JavaScript" loading="lazy" decoding="async" />
                 <span>JavaScript</span>
             </div>
             <div class="skill-card">
-                <img src="images/html logo.png" alt="HTML" />
+                <img src="images/html logo.png" alt="HTML" loading="lazy" decoding="async" />
                 <span>HTML</span>
             </div>
             <div class="skill-card">
-                <img src="images/css logo.png" alt="CSS" />
+                <img src="images/css logo.png" alt="CSS" loading="lazy" decoding="async" />
                 <span>CSS</span>
             </div>
             <div class="skill-card">
-                <img src="images/react logo.png" alt="React" />
+                <img src="images/react logo.png" alt="React" loading="lazy" decoding="async" />
                 <span>React</span>
             </div>
             <div class="skill-card">
-                <img src="images/sql logo.png" alt="SQL" />
+                <img src="images/sql logo.png" alt="SQL" loading="lazy" decoding="async" />
                 <span>SQL</span>
             </div>
         </div>
@@ -156,7 +160,7 @@
     <!-- ============ PROJECTS SECTION ============ -->
     <section class="projects" id="projects">
         <h2 class="section_title">
-            <span class="accent-num">03.</span> <span data-i18n="projects.title">My Projects</span>
+            <span class="accent-num">𝓲𝓲𝓲.</span> <span data-i18n="projects.title">My Projects</span>
         </h2>
         <div class="projects_grid">
             <div class="project-card">
@@ -261,7 +265,7 @@
     <!-- ============ CONTACT SECTION ============ -->
     <section class="section contact" id="contact">
         <h2 class="section__title">
-            <span class="accent-num">04.</span> <span data-i18n="contact.title">Get In Touch</span>
+            <span class="accent-num">𝓲𝓿.</span> <span data-i18n="contact.title">Get In Touch</span>
         </h2>
         <div class="contact__content">
             <p class="contact__text" data-i18n="contact.text">
@@ -272,17 +276,17 @@
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/meeldprn" method="POST">
                 <div class="contact-form__group">
                     <label for="name" class="contact-form__label" data-i18n="contact.labelName">Name</label>
-                    <input type="text" id="name" name="name" class="contact-form__input" data-i18n-placeholder="contact.placeholderName" placeholder="Your name"
+                    <input type="text" id="name" name="name" class="contact-form__input" data-i18n-placeholder="contact.placeholderName" placeholder="Your name" autocomplete="name"
                         required />
                 </div>
                 <div class="contact-form__group">
                     <label for="email" class="contact-form__label" data-i18n="contact.labelEmail">Email</label>
-                    <input type="email" id="email" name="email" class="contact-form__input" data-i18n-placeholder="contact.placeholderEmail" placeholder="your@email.com"
+                    <input type="email" id="email" name="email" class="contact-form__input" data-i18n-placeholder="contact.placeholderEmail" placeholder="your@email.com" autocomplete="email" inputmode="email"
                         required />
                 </div>
                 <div class="contact-form__group">
                     <label for="subject" class="contact-form__label" data-i18n="contact.labelSubject">Subject</label>
-                    <input type="text" id="subject" name="subject" class="contact-form__input" data-i18n-placeholder="contact.placeholderSubject"
+                    <input type="text" id="subject" name="subject" class="contact-form__input" data-i18n-placeholder="contact.placeholderSubject" autocomplete="off"
                         placeholder="What is this about?" />
                 </div>
                 <div class="contact-form__group">
@@ -300,10 +304,11 @@
                         Sending...
                     </span>
                 </button>
-                <p class="contact-form__status" id="formStatus"></p>
+                <p class="contact-form__status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
         </div>
     </section>
+    </main>
 
     <!-- ============ FOOTER ============ -->
     <footer class="footer">
@@ -316,7 +321,7 @@
                     </path>
                 </svg>
             </a>
-            <a href="www.linkedin.com/in/michail-angelos-kostoglou" target="_blank"
+            <a href="https://www.linkedin.com/in/michail-angelos-kostoglou" target="_blank"
                 rel="noopener noreferrer" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
