@@ -1,8 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ==============================================
-   DESIGN SYSTEM — Black Theme + Blood Red Accent
-   ============================================== */
 :root {
   /* Colors */
   --bg-primary: #050505;
@@ -38,9 +35,7 @@
   --shadow-accent: 0 16px 42px -24px rgba(139, 0, 0, 0.45);
 }
 
-/* ==============================================
-   RESET & BASE
-   ============================================== */
+
 *,
 *::before,
 *::after {
